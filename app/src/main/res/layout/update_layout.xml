@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.englishplay.loginactivity.UpdatePwdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/input_password_old"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入旧密码"
+                android:inputType="textPassword"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/input_password_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:text="确认"/>
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

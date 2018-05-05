@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EnglishPlay</string>
+    <string name="action_settings">Settings</string>\
+    <string name="setting">设置</string>
+    <string name="exit">退出</string>
+    <string name="open_vip">开通会员</string>
+    <string name="qq_wallet">学习记录</string>
+    <string name="online_hall">个人资料</string>
+    <string name="qq_dress">分享</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="my_photo">我的相册</string>
+    <string name="my_folder">我的文件夹</string>
+    <string name="qq">English Play</string>
+    <string name="qqName">小飞侠</string>
+    <string name="qq_describe">个性签名 : Never Say No</string>
+    <string name="learn_number">You had learned 8 words Nice Nice Nice!!!</string>
+    <string name="what_you_see">What you see</string>
+    <string name="help_to_read">Help to read</string>
+</resources>
