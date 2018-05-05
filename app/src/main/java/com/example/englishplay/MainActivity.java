@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.englishplay.menuactivity.SlidingMenu;
+import com.example.englishplay.readactivity.ReadActivity;
 import com.example.englishplay.seeactivity.SeeActivity;
 
 
@@ -56,7 +57,7 @@ public class MainActivity extends FragmentActivity {
         read_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SeeActivity.class);
+                Intent intent = new Intent(MainActivity.this, ReadActivity.class);
                 startActivity(intent);
             }
         });

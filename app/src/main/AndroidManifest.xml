@@ -13,10 +13,13 @@
     <!-- 获取sd卡写的权限，用于文件上传和下载 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <!-- 允许读取手机状态 用于创建BmobInstallation -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
 
     <application
         android:allowBackup="true"
@@ -37,7 +40,9 @@
         <activity android:name=".loginactivity.UpdatePwdActivity" />
         <activity android:name=".seeactivity.SeeActivity" />
         <activity android:name=".seeactivity.TranslateActivity" />
-        <activity android:name=".seeactivity.DetailActivity"></activity>
+        <activity android:name=".seeactivity.DetailActivity" />
+        <activity android:name=".readactivity.ReadActivity" />
+        <activity android:name=".readactivity.CameraActivity"></activity>
     </application>
 
 </manifest>
