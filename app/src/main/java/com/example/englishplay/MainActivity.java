@@ -6,9 +6,11 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.englishplay.learnactivity.LearnActivity;
 import com.example.englishplay.menuactivity.SlidingMenu;
 import com.example.englishplay.readactivity.CameraActivity;
 import com.example.englishplay.seeactivity.SeeActivity;
+import com.example.englishplay.view.CircleButtonView;
 
 
 public class MainActivity extends FragmentActivity {
@@ -22,6 +24,10 @@ public class MainActivity extends FragmentActivity {
 //    private static final int TAKE_PHOTO = 1;
 //    private static final int CHOOSE_PHOTO = 2;
 //    private Uri imageUri;
+
+    private CircleButtonView see_btn;
+    private CircleButtonView learn_btn;
+    private CircleButtonView read_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +47,12 @@ public class MainActivity extends FragmentActivity {
     }
 
     public void init(){
-        see_text = (TextView) findViewById(R.id.see_tv);
-        read_text = (TextView) findViewById(R.id.read_tv);
 
-        see_text.setOnClickListener(new View.OnClickListener() {
+        see_btn = (CircleButtonView) findViewById(R.id.cbv_see);
+        learn_btn = (CircleButtonView) findViewById(R.id.cbv_learn);
+        read_btn = (CircleButtonView) findViewById(R.id.cbv_read);
+
+        see_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SeeActivity.class);
@@ -52,15 +60,23 @@ public class MainActivity extends FragmentActivity {
             }
         });
 
-        //Log.i(LOG_TAG, "Main Activity Created.");
+        learn_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LearnActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        read_text.setOnClickListener(new View.OnClickListener() {
+        read_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, CameraActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 
     public void toggle(View view) {
