@@ -19,7 +19,6 @@
             android:textSize="22sp"
             android:textColor="#ffff"/>
 
-
     </LinearLayout>
     <SurfaceView
         android:id="@+id/surfaceView"
@@ -28,11 +27,7 @@
         android:layout_weight="1"
         android:background="@drawable/cbg"/>
 
-    <!--<ImageView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="6"-->
-    <!--android:background="@drawable/cbg" />-->
+
 
     <LinearLayout
         android:layout_width="match_parent"

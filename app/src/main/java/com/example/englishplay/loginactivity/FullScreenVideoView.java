@@ -4,10 +4,12 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.VideoView;
 
-import java.util.jar.Attributes;
-
 /**
  * Created by 小飞侠 on 2018/5/4.
+ */
+
+/*
+仿照QQ登录背景视频
  */
 
 public class FullScreenVideoView extends VideoView {

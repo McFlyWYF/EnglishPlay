@@ -16,6 +16,9 @@ import com.nineoldandroids.view.ViewHelper;
  * Created by 小飞侠 on 2018/5/4.
  */
 
+/*
+侧滑菜单
+ */
 public class SlidingMenu extends HorizontalScrollView {
 
     private LinearLayout mWapper;

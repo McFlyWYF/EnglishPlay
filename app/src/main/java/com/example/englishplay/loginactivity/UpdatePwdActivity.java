@@ -18,6 +18,9 @@ import cn.bmob.v3.listener.UpdateListener;
  * Created by 小飞侠 on 2018/5/4.
  */
 
+/*
+重置密码
+ */
 public class UpdatePwdActivity extends AppCompatActivity {
 
     private Intent intent;

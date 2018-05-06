@@ -11,6 +11,9 @@ import android.widget.Scroller;
  * Created by 小飞侠 on 2018/5/5.
  */
 
+/*
+菜单侧滑，没有使用这个类
+ */
 public class DragDelItem extends LinearLayout {
 
 
