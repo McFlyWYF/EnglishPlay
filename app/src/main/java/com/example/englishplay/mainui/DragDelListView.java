@@ -10,6 +10,9 @@ import android.widget.ListView;
  * Created by 小飞侠 on 2018/5/5.
  */
 
+/*
+菜单侧滑，目前没有使用这个类
+ */
 public class DragDelListView extends ListView {
 
     //是否可以拖动

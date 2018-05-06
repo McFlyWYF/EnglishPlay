@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import com.example.englishplay.R;
 
+/*
+显示单词的具体细节
+ */
 public class DetailActivity extends AppCompatActivity{
 
     private TextView detail_tv1,detail_tv2,detail_tv3,detail_tv4,detail_tv5,detail_tv6,detail_tv7;

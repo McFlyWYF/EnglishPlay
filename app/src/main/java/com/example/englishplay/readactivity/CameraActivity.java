@@ -17,9 +17,13 @@ import com.example.englishplay.readactivity.tools.SystemBarTintManager;
 
 import java.io.IOException;
 
-public class CameraActivity extends AppCompatActivity implements View.OnClickListener,SurfaceHolder.Callback{
+/*
+调用相机
+ */
+public class CameraActivity extends AppCompatActivity implements View.OnClickListener, SurfaceHolder.Callback {
 
 
+    private static final String TAG = "CameraActivity";
     private SurfaceView camera_sf;
     private Button camera_btn;
     private Camera mCamera;
@@ -42,7 +46,9 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
         camera_sf.setOnClickListener(this);
         mHolder = camera_sf.getHolder();
         mHolder.addCallback(this);
+
     }
+
 
     @Override
     protected void onResume() {
@@ -65,7 +71,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             mCamera = null;
         }
     }
-
 
 
     private void changeSystemBar() {
@@ -98,26 +103,26 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
     private void startTakephoto() {
         //获取到相机参数
         Camera.Parameters parameters = mCamera.getParameters();
-//        //设置图片保存格式
+//       //设置图片保存格式
 //        parameters.setPictureFormat(ImageFormat.JPEG);
-//                              //设置图片大小
-//        parameters.setPreviewSize(480, 720);
-//                              //设置对焦
-//        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
-//                              //设置自动对焦
-//        mCamera.autoFocus(new Camera.AutoFocusCallback() {
-//                                  @Override
-//                                  public void onAutoFocus(boolean success, Camera camera) {
-//                                      if (success) {
-//                                          mCamera.takePicture(null, null, new Camera.PictureCallback() {
-//                                              @Override
-//                                              public void onPictureTaken(byte[] data, Camera camera) {
-////                            dealWithCameraData(data);
-//                                              }
-//                                          });
-//                                      }
-//                                  }
-        //       });
+        //设置图片大小
+        parameters.setPreviewSize(228, 228);
+        //设置对焦
+        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+        //设置自动对焦
+        mCamera.autoFocus(new Camera.AutoFocusCallback() {
+            @Override
+            public void onAutoFocus(boolean success, Camera camera) {
+                if (success) {
+                    mCamera.takePicture(null, null, new Camera.PictureCallback() {
+                        @Override
+                        public void onPictureTaken(byte[] data, Camera camera) {
+                            //dealWithCameraData(data);
+                        }
+                    });
+                }
+            }
+        });
     }
 
 //    //保存拍照数据
@@ -187,4 +192,5 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             e.printStackTrace();
         }
     }
+
 }

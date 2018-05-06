@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.example.englishplay.R;
 
+
 public class ReadActivity extends AppCompatActivity {
 
     Button capButton;

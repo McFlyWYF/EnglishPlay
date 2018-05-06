@@ -8,9 +8,14 @@ import android.widget.ImageView;
 
 import com.example.englishplay.R;
 
+/*
+调用相机识别物体类
+ */
 public class TranslateActivity extends AppCompatActivity {
 
     private ImageView comment_image;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
