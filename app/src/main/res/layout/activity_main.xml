@@ -1,6 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleButtonView="http://schemas.android.com/tools"
     android:background="#FFE4E1">
 
     <com.example.englishplay.menuactivity.SlidingMenu
@@ -61,57 +63,151 @@
                         android:textSize="20sp"
                         android:layout_gravity="center"/>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_marginTop="30dp"
-                        android:background="@color/warning_stroke_color">
+                        android:layout_height="wrap_content">
 
-                        <!--<ImageView-->
-                        <!--android:layout_width="50dp"-->
-                        <!--android:layout_height="50dp"-->
-                        <!--android:src="@drawable/icon"-->
-                        <!--android:layout_alignParentLeft="true"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:foregroundGravity="center_vertical"/>-->
+                        <com.example.englishplay.view.CircleButtonView
+                            android:id="@+id/cbv_learn"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            app:cbv_color="@color/colorPrimary"
+                            app:cbv_pressedRingWidth="8dp"
+                            CircleButtonView:cbv_text="dfasd"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="50dp"/>
 
                         <TextView
-                            android:id="@+id/see_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="150dp"
+                            android:text="To learn English"
+                            android:layout_below="@id/cbv_learn"
+                            android:layout_marginLeft="42dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"/>
+
+                        <com.example.englishplay.view.CircleButtonView
+                            android:id="@+id/cbv_see"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            app:cbv_color="#dda0dd"
+                            app:cbv_pressedRingWidth="8dp"
+                            CircleButtonView:cbv_text="dfasd"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="50dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="@string/what_you_see"
-                            android:textColor="@color/white"
-                            android:textSize="30sp" />
+                            android:layout_below="@id/cbv_see"
+                            android:layout_marginLeft="210dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"/>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:background="#ffd700">
-
-                        <!--<ImageView-->
-                        <!--android:layout_width="50dp"-->
-                        <!--android:layout_height="50dp"-->
-                        <!--android:src="@drawable/icon"-->
-                        <!--android:layout_alignParentLeft="true"-->
-                        <!--android:layout_marginLeft="10dp"-->
-                        <!--android:foregroundGravity="center_vertical"/>-->
-
+                        <com.example.englishplay.view.CircleButtonView
+                            android:id="@+id/cbv_read"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            app:cbv_color="#ffd700"
+                            app:cbv_pressedRingWidth="8dp"
+                            CircleButtonView:cbv_text="dfasd"
+                            android:layout_below="@id/cbv_learn"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="130dp"/>
 
                         <TextView
-                            android:id="@+id/read_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="150dp"
-                            android:text="@string/help_to_read"
-                            android:textColor="@color/white"
-                            android:textSize="30sp" />
+                            android:text="To learn English"
+                            android:layout_below="@id/cbv_read"
+                            android:layout_marginLeft="115dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"/>
 
-                    </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="150dp"-->
+                        <!--android:layout_marginTop="30dp"-->
+                        <!--android:background="@color/warning_stroke_color">-->
+
+                        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_alignParentLeft="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:foregroundGravity="center_vertical"/>&ndash;&gt;-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/learn_tv"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_marginLeft="150dp"-->
+                            <!--android:text="@string/what_you_see"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="30sp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="150dp"-->
+                        <!--android:layout_marginTop="30dp"-->
+                        <!--android:background="@color/warning_stroke_color">-->
+
+                        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_alignParentLeft="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:foregroundGravity="center_vertical"/>&ndash;&gt;-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/see_tv"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_marginLeft="150dp"-->
+                            <!--android:text="@string/what_you_see"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="30sp" />-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="150dp"-->
+                        <!--android:background="#ffd700">-->
+
+                        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_alignParentLeft="true"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:foregroundGravity="center_vertical"/>&ndash;&gt;-->
+
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/read_tv"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:layout_marginLeft="150dp"-->
+                            <!--android:text="@string/help_to_read"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="30sp" />-->
+
+                    <!--</LinearLayout>-->
 
                 </LinearLayout>
 

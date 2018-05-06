@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sign"
+    android:background="#FFE4E1"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="com.example.englishplay.loginactivity.UpdatePwdActivity">
