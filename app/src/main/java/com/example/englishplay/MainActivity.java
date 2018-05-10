@@ -85,7 +85,7 @@ public class MainActivity extends FragmentActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         Toast.makeText(this, photoFile.getPath() +"    "+ photoFile.length(), Toast.LENGTH_LONG).show();
-        Log.d("test", "onActivityResult: " + photoFile.getPath() + "\n" + photoFile.length());
+        Log.d("Test", "onActivityResult: " + photoFile.getPath() + "\n" + photoFile.length());
 
     }
 }
