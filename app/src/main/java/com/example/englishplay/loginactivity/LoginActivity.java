@@ -108,7 +108,7 @@ public class LoginActivity extends AppCompatActivity  {
 
 
     private void playVideoView() {
-        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video));
+        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video1));
 
         //播放
         mVideoView.start();

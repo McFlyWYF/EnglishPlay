@@ -1,6 +1,7 @@
 package com.example.englishplay.readactivity;
 
 import android.annotation.TargetApi;
+import android.content.Context;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,14 +21,15 @@ import java.io.IOException;
 /*
 调用相机
  */
-public class CameraActivity extends AppCompatActivity implements View.OnClickListener, SurfaceHolder.Callback {
+public class CameraActivity1 extends AppCompatActivity implements View.OnClickListener, SurfaceHolder.Callback {
 
 
-    private static final String TAG = "CameraActivity";
+    private static final String TAG = "CameraActivity1";
     private SurfaceView camera_sf;
     private Button camera_btn;
     private Camera mCamera;
     private SurfaceHolder mHolder;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,30 +102,34 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private void startTakephoto() {
-        //获取到相机参数
-        Camera.Parameters parameters = mCamera.getParameters();
-//       //设置图片保存格式
-//        parameters.setPictureFormat(ImageFormat.JPEG);
-        //设置图片大小
-        parameters.setPreviewSize(228, 228);
-        //设置对焦
-        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
-        //设置自动对焦
-        mCamera.autoFocus(new Camera.AutoFocusCallback() {
-            @Override
-            public void onAutoFocus(boolean success, Camera camera) {
-                if (success) {
-                    mCamera.takePicture(null, null, new Camera.PictureCallback() {
-                        @Override
-                        public void onPictureTaken(byte[] data, Camera camera) {
-                            //dealWithCameraData(data);
-                        }
-                    });
-                }
-            }
-        });
-    }
+//    private void startTakephoto() {
+//
+//        //获取到相机参数
+//        Camera.Parameters parameters = mCamera.getParameters();
+////       //设置图片保存格式
+////        parameters.setPictureFormat(ImageFormat.JPEG);
+//        //设置图片大小
+//        parameters.setPreviewSize(getWidth(), getHeight());
+//        parameters.setPictureSize(getWidth(),getHeight());
+//        mCamera.setDisplayOrientation(90);
+//        mCamera.setParameters(parameters);
+//        //设置对焦
+//        parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+//        //设置自动对焦
+//        mCamera.autoFocus(new Camera.AutoFocusCallback() {
+//            @Override
+//            public void onAutoFocus(boolean success, Camera camera) {
+//                if (success) {
+//                    mCamera.takePicture(null, null, new Camera.PictureCallback() {
+//                        @Override
+//                        public void onPictureTaken(byte[] data, Camera camera) {
+//                            //dealWithCameraData(data);
+//                        }
+//                    });
+//                }
+//            }
+//        });
+//    }
 
 //    //保存拍照数据
 //    private void dealWithCameraData(byte[] data) {
@@ -137,7 +143,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
 //            //保存图片数据
 //            fos.write(data);
 //            fos.close();
-//            Intent intent = new Intent(CameraActivity.this, ShowResultActivity.class);
+//            Intent intent = new Intent(CameraActivity1.this, ShowResultActivity.class);
 //            intent.putExtra(FILE_PATH, fileName);
 //            startActivity(intent);
 //            finish();
@@ -186,7 +192,6 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
             camera.setPreviewDisplay(holder);
             //调整系统相机拍照角度
             camera.setDisplayOrientation(90);
-            //调用相机预览功能
             camera.startPreview();
         } catch (IOException e) {
             e.printStackTrace();

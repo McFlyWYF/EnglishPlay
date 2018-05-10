@@ -3,14 +3,18 @@ package com.example.englishplay;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.baidu.ocr.ui.camera.CameraActivity;
 import com.example.englishplay.learnactivity.LearnActivity;
 import com.example.englishplay.menuactivity.SlidingMenu;
-import com.example.englishplay.readactivity.CameraActivity;
 import com.example.englishplay.seeactivity.SeeActivity;
 import com.example.englishplay.view.CircleButtonView;
+
+import java.io.File;
 
 
 public class MainActivity extends FragmentActivity {
@@ -18,12 +22,9 @@ public class MainActivity extends FragmentActivity {
     private TextView see_text = null;
     private TextView read_text = null;
 
-//    private final static String LOG_TAG = "MainActivity";
-//
-//    private ImageView picture;
-//    private static final int TAKE_PHOTO = 1;
-//    private static final int CHOOSE_PHOTO = 2;
-//    private Uri imageUri;
+    File photoFile = null;
+
+    public static final int REQUEST_CODE_ACCURATE_BASIC = 1;
 
     private CircleButtonView see_btn;
     private CircleButtonView learn_btn;
@@ -37,13 +38,6 @@ public class MainActivity extends FragmentActivity {
         slidingMenu = (SlidingMenu) findViewById(R.id.slidingmenu);
 
         init();
-
-//        Window window = getWindow();//得到窗口
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);//没有标题
-//
-//        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//设置全屏
-//
-//        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);//设置高亮
     }
 
     public void init(){
@@ -71,11 +65,14 @@ public class MainActivity extends FragmentActivity {
         read_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                photoFile = new File(getExternalCacheDir(),"image.jpg");
+
                 Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-                startActivity(intent);
+                intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,photoFile.getPath());
+                intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,CameraActivity.CONTENT_TYPE_GENERAL);
+                startActivityForResult(intent,REQUEST_CODE_ACCURATE_BASIC);
             }
         });
-
 
     }
 
@@ -83,4 +80,12 @@ public class MainActivity extends FragmentActivity {
         slidingMenu.toggle();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Toast.makeText(this, photoFile.getPath() +"    "+ photoFile.length(), Toast.LENGTH_LONG).show();
+        Log.d("test", "onActivityResult: " + photoFile.getPath() + "\n" + photoFile.length());
+
+    }
 }

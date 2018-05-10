@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.englishplay">
 
     <!-- 允许联网 -->
@@ -28,7 +29,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
         <activity android:name=".loginactivity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,9 +45,21 @@
         <activity android:name=".seeactivity.TranslateActivity" />
         <activity android:name=".seeactivity.DetailActivity" />
         <activity android:name=".readactivity.ReadActivity" />
-        <activity android:name=".readactivity.CameraActivity" />
+        <activity android:name=".readactivity.CameraActivity1" />
         <activity android:name=".learnactivity.LearnActivity" />
-        <activity android:name=".learnactivity.WordsActivity"></activity>
+        <activity android:name=".learnactivity.WordsActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.englishplay.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".LoadActivity"></activity>
     </application>
 
 </manifest>

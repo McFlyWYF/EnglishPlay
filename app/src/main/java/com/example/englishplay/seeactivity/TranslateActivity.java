@@ -15,8 +15,6 @@ public class TranslateActivity extends AppCompatActivity {
 
     private ImageView comment_image;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

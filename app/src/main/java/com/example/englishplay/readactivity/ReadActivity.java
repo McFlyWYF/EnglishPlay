@@ -38,7 +38,7 @@ public class ReadActivity extends AppCompatActivity {
         capButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toCamera = new Intent(ReadActivity.this, CameraActivity.class);
+                Intent toCamera = new Intent(ReadActivity.this, CameraActivity1.class);
                 startActivity(toCamera);
             }
         });
@@ -46,7 +46,7 @@ public class ReadActivity extends AppCompatActivity {
 //        readButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent toCamera = new Intent(ReadActivity.this, CameraActivity.class);
+//                Intent toCamera = new Intent(ReadActivity.this, CameraActivity1.class);
 //                startActivity(toCamera);
 //            }
 //        });
