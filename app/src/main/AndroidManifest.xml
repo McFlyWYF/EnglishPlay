@@ -31,14 +31,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".loginactivity.LoginActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".loginactivity.LoginActivity" />
         <activity android:name=".loginactivity.SignActivity" />
         <activity android:name=".loginactivity.UpdatePwdActivity" />
         <activity android:name=".seeactivity.SeeActivity" />
@@ -58,8 +58,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-
-        <activity android:name=".LoadActivity"></activity>
     </application>
 
 </manifest>
