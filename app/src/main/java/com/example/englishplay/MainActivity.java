@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.baidu.ocr.ui.camera.CameraActivity;
 import com.example.englishplay.learnactivity.LearnActivity;
 import com.example.englishplay.menuactivity.SlidingMenu;
+import com.example.englishplay.readactivity.CameraActivity1;
 import com.example.englishplay.seeactivity.SeeActivity;
 import com.example.englishplay.view.CircleButtonView;
 
@@ -49,8 +50,10 @@ public class MainActivity extends FragmentActivity {
         see_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SeeActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
+                intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,photoFile);
+                intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,CameraActivity.CONTENT_TYPE_GENERAL);
+                startActivityForResult(intent,REQUEST_CODE_ACCURATE_BASIC);
             }
         });
 
@@ -65,10 +68,8 @@ public class MainActivity extends FragmentActivity {
         read_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                photoFile = new File(getExternalCacheDir(),"image.jpg");
-
-                Intent intent = new Intent(MainActivity.this, CameraActivity.class);
-                intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,photoFile.getPath());
+                Intent intent = new Intent(MainActivity.this,CameraActivity.class);
+                intent.putExtra(CameraActivity.KEY_OUTPUT_FILE_PATH,photoFile);
                 intent.putExtra(CameraActivity.KEY_CONTENT_TYPE,CameraActivity.CONTENT_TYPE_GENERAL);
                 startActivityForResult(intent,REQUEST_CODE_ACCURATE_BASIC);
             }

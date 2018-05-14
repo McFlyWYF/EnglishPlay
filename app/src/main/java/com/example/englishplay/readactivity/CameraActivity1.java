@@ -26,7 +26,7 @@ public class CameraActivity1 extends AppCompatActivity implements View.OnClickLi
 
     private static final String TAG = "CameraActivity1";
     private SurfaceView camera_sf;
-    private Button camera_btn;
+    //private Button camera_btn;
     private Camera mCamera;
     private SurfaceHolder mHolder;
     Context context;
@@ -43,14 +43,13 @@ public class CameraActivity1 extends AppCompatActivity implements View.OnClickLi
 
     private void initViews() {
         this.camera_sf = findViewById(R.id.surfaceView);
-        this.camera_btn = findViewById(R.id.CAP_Button);
-        this.camera_btn.setOnClickListener(this);
+        //this.camera_btn = findViewById(R.id.CAP_Button);
+        //this.camera_btn.setOnClickListener(this);
         camera_sf.setOnClickListener(this);
         mHolder = camera_sf.getHolder();
         mHolder.addCallback(this);
 
     }
-
 
     @Override
     protected void onResume() {

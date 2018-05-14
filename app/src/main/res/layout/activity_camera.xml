@@ -22,38 +22,56 @@
     </LinearLayout>
     <SurfaceView
         android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/cbg"/>
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
 
-        <Button
-            android:id="@+id/CAP_Button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#fe9a9a"
-            android:text="CAP"
-            android:textColor="#ffffff" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/READ_Button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="#fe9a9a"
-            android:text="READ"
-            android:textColor="#ffffff" />
+            <ImageView
+                android:id="@+id/most_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slidecam" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most Likely : "
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/next_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/slidecam" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Likely : "
+                android:textSize="20sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

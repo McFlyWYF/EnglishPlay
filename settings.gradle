@@ -1,1 +1,1 @@
-include ':app', ':mylibrary', ':ocr_ui'
+include ':app', ':ocr_ui', 'camera', ':library'

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EnglishPlay.iml" filepath="$PROJECT_DIR$/EnglishPlay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EnglishPlay.iml" filepath="$PROJECT_DIR$/.idea/EnglishPlay.iml" />
+      <module fileurl="file://E:\EnglishPlay\EnglishPlay\EnglishPlay.iml" filepath="E:\EnglishPlay\EnglishPlay\EnglishPlay.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camera/camera.iml" filepath="$PROJECT_DIR$/camera/camera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
     </modules>
   </component>
